@@ -1,38 +1,102 @@
-.App {
-  text-align: center;
+body{
+    background-color: #333;
+    font-size: 18px;
+    color: #999;
+}
+#box{
+    width: 1000px;
+    margin: 50px auto 0;
+    background-color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* search */
+#search{
+    margin-bottom: 20px;
+    border: 1px solid #10100c;
+}
+#search>div{
+    display: flex;
+    padding: 20px;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+}
+#search>div>input{
+    width: 75%;
+    border: 1px solid #10100c;
+    line-height: 30px;
+    text-indent: 30px;
+}
+#search>div>button{
+    border: none;
+    background-color: #10100c;
+    width: 20%;
+    color: #fff;
+    height: 100%;
+    font-size: 25px;
+}
+#search>div>ul{
+    position: absolute;
+    right: 0;
+    top: 74px;
+    background-color: #fff;
+    width: 200px;
+    border: 1px solid #10100c;
+    z-index: 100;
+}
+#search>div>ul>li{
+    padding: 10px;
+    border-bottom: 1px solid #10100c;
+    cursor: pointer;
+}
+#search>div>ul>li:last-child{
+    border-bottom: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* list */
+#list{
+    padding: 0 20px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#list>ul{
 }
-
-.App-link {
-  color: #61dafb;
+#list>ul>li{
+    border-bottom: 1px solid #10100c;
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 20px 0;
+    justify-content: space-between;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#list>ul>li>dl{
+    width: 80%;
+    position: relative;
+}
+#list>ul>li>dl>dt{
+    font-size: 23px;
+    color: #10100c;
+    margin-bottom: 10px;
+}
+#list>ul>li>dl>dd{
+    font-size: 16px;
+    color: #333;
+}
+#list>ul>li>dl>dd>dfn{
+    font-size: 20px;
+    color: orange;
+    padding-right: 10px;
+    margin-bottom: 10px;
+}
+#list>ul>li>dl>dd:last-child{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+#list>ul>li>button{
+    width: 60px;
+    height: 60px;
+    background-color: rgb(143, 11, 11);
+    color: #fff;
+    border: none;
+    font-size: 25px;
 }
